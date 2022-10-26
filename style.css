@@ -1,0 +1,622 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/************* NAV BAR **************/
+
+.nav-bar {
+    z-index: 1000;
+    background-color: transparent;
+    padding: 10px 40px 35px 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1.5vh;
+    transition-duration: 1s;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-family: 'Manrope', sans-serif;
+}
+
+.nav-name {
+    align-items: left;
+    width: 50%;
+    font-size: 25px;
+    padding-left: 15px;
+    font-weight: 700;
+    color: #76AFB8;
+}
+
+.name-logo {
+    color: #76AFB8;
+    text-decoration: none;
+}
+
+.nav-links {
+    text-align: right;
+    padding-top: 4px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.link {
+    padding-left: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.current {
+    font-weight: 600;
+    text-decoration: underline 2.5px #76AFB8 !important;
+}
+
+.nav-bar a:hover {
+    fill: #313131; /* only change this if nbn nav logo is on a dark background -- if so, change to #ECECEC */
+    transition-duration: 0s;
+}
+
+/* NAV BAR ON SCROLL */
+
+.nav-bar-scroll {
+    background-color: white;
+    filter: drop-shadow(0 1px 1px rgb(0,0,0,.5));
+}
+
+
+/************* HEADER **************/
+
+.homepage-header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.header-content {
+    font-family: 'Manrope', sans-serif;
+    font-size: 100px;
+    text-align: center;
+}
+
+
+/************* PROJECT SECTION **************/
+
+.projects-section {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5vh;
+}
+
+.section-list-div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-bottom: 55px;
+}
+
+.section-name {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #989898;
+}
+
+.section-name:hover {
+    color: black;
+    cursor: pointer;
+}
+
+#all {
+    font-size: 25px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.projects a {
+    text-decoration: none;
+    width: 30%;
+}
+
+.project-card {
+    display: block;
+    margin-bottom: 60px;
+}
+
+.project-image {
+    background-image: url(images/print-design.png);
+    background-size: cover;
+    background-position: center center;
+    height: 300px;
+    width: 22vw;
+    filter: drop-shadow(1px 2px 3px #989898);
+}
+
+.project-title {
+    /* width: 100%; */
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    color: black;
+}
+
+.tag {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    background-color: #76AFB8;
+    border-radius: 15px;
+    color: white;
+    padding: 3px 8px;
+    display: inline;
+    margin-right: 0;
+}
+
+.clicked {
+    color: black;
+}
+
+
+#nbn-print {
+    background-image: url(images/homepage/print-cover.png);
+}
+
+#nbn-mag-to-web {
+    background-image: url(images/homepage/web-cover.png);
+}
+
+#baip {
+    background-image: url(images/homepage/baip-cover.png);
+}
+
+#uncut {
+    background-image: url(images/homepage/uncut-cover.png);
+}
+
+#sports-photography {
+    background-image: url(images/homepage/photography-cover.png);
+}
+
+#studio-assistant {
+    background-image: url(images/homepage/studioassistant-cover.png);
+}
+
+#postcards {
+    background-image: url(images/homepage/postcards-cover.png);
+}
+
+#wavelength {
+    background-image: url(images/homepage/uxui-cover.png);
+}
+
+#amazon-sellers {
+    background-image: url(images/homepage/amazon-sellers-cover.png);
+}
+
+
+/************* PROJECT PAGES **************/
+
+/* summary */
+
+.project-text {
+    display: grid;
+    column-gap: 100px;
+    grid-template-areas: "body body body body body body body summary summary summary";
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.summary {
+    grid-area: summary;
+    width: 100%;
+    margin-top: 50px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+}
+
+.summary-item {
+    margin-bottom: 10px;
+}
+
+.summary-title {
+    color: #76AFB8;
+    font-weight: 700;
+}
+
+.project-page-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 55px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20vh;
+    margin-bottom: 15px;
+}
+
+.project-page-tag {
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #76AFB8;
+    color: white;
+    border-radius: 15px;
+    padding: 5px 11px;
+    display: inline;
+}
+
+.project-page-body {
+    margin-top: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 1.4em;
+    grid-area: body;
+    width: 80%;
+}
+
+.project-page-body p {
+    margin-bottom: 20px;
+    /* margin-left: 10%; */
+    /* margin-right: 50%; */
+}
+
+.project-page-body li {
+    margin-left: 2vw;
+}
+
+.pullquote {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.4em;
+    color: #76AFB8;
+}
+
+.subheading {
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.project-page-image {
+    width: 100%;
+}
+
+.photo-group {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* bottom navigation */
+
+.portfolio-navigation {
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5vh;
+    margin-top: 15vh;
+    margin-bottom: 3vh;
+}
+
+.portfolio-navigation a {
+    color: black;
+    text-decoration: none;
+}
+
+.portfolio-navigation a:hover {
+    color: #313131;
+}
+
+.portfolio-navigation > h2 {
+    width: 50%;
+    font-size: 25px;
+}
+
+.project-link {
+    font-family: 'Manrope', sans-serif;
+    font-size: 25px;
+}
+
+.left {
+    text-align: left;
+    padding-right: 2%;
+}
+
+.right {
+    text-align: right;
+    padding-right: 2%;
+}
+
+.text-link {
+    color: #76AFB8;
+}
+
+
+/**** nbn mag-to-web ***/
+
+.web-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.web-project-card {
+    width: 48%;
+    margin-bottom: 30px;
+}
+
+.web-project-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    filter: drop-shadow(1px 3px 4px #e2e2e2);
+}
+
+#mag-to-web-homepage {
+    background-image: url(images/mag-to-web/spring2021homepage.png);
+}
+
+#olivia-pierce {
+    background-image: url(images/mag-to-web/oliviapierce.png);
+}
+
+#swingers {
+    background-image: url(images/mag-to-web/swingers.png);
+}
+
+#dr-zoom {
+    background-image: url(images/mag-to-web/dr-zoom.png);
+}
+
+.web-projects a {
+    text-decoration: none;
+    color: black;
+}
+
+.web-project-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    line-height: 1.3em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #76AFB8;
+}
+
+.web-project-description {
+    font-size: 15px;
+    line-height: 1.3em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/**** baip ***/
+
+#wireframe {
+    float: left;
+    width: 15%;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.interview-group {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.interview-photo {
+    /* width: 49%; */
+    height: 340px;
+}
+
+
+/**** uncut ***/
+
+.uncut-photo-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.uncut-photo {
+    width: 49%;
+    margin-bottom: 15px;
+}
+
+#uncut-story {
+    width: 100%;
+}
+
+
+/**** wavelength ***/
+
+#wavelength-ss {
+    width: 35%;
+    margin-left: 32%;
+    filter: drop-shadow(1px 2px 2px #989898);
+}
+
+.wireframe-group {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.wireframe-photo {
+    width: 19%;
+    filter: drop-shadow(1px 2px 2px #989898);
+}
+
+
+/**** amazon sellers ***/
+
+.dash {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+
+/**** studio assistant ***/
+
+.illo-group {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.illo-3 {
+    height: 190px;
+}
+
+.illo-2 {
+    height: 346px;
+    margin-bottom: 23px;
+}
+
+
+/**** postcards ***/
+
+.postcard-group {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.postcard-3 {
+    height: 270px;
+    margin-bottom: 23px;
+}
+
+.postcard-2 {
+    height: 335px;
+}
+
+
+/**** sports photography ***/
+
+.sports-gallery {
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.sports-photo {
+    /* width: 48%; */
+    height: 200px;
+    margin: 5px;
+}
+
+/************* FEATURED PROJECT SECTION **************/
+
+/* .section-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.featured-project-card {
+    height: 500px;
+    background-color: #E3E3E3;
+    font-family: 'Manrope', sans-serif;
+    margin: 30px 15%;
+} */
+
+
+/************* PROJECT SECTIONS **************/
+
+/* .project-section {
+    margin-top: 80px;
+}
+
+.project-card-section {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.project-card {
+    height: 300px;
+    background-color: #E3E3E3;
+    font-family: 'Manrope', sans-serif;
+    width: 32%;
+    margin-top: 30px;
+} */
+
+
+/************* ABOUT ME **************/
+
+.about-me {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image img {
+    width: 80%;
+}
+
+.text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    width: 40%;
+    text-align: left;
+    margin-top: 20vh;
+}
+
+.text p, li {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.text h2, .text p, li {
+    margin-bottom: 20px;
+}
+
+.about-title {
+    font-size: 30px;
+    color: #76AFB8;
+}
+
+
+
+/************* MOBILE STYLING **************/
+
+@media screen and (max-width: 900px){
+    .navbar{
+        height: 5vh;
+    }
+}
