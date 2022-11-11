@@ -25,9 +25,12 @@
             </div>
         </nav>
 
-        <header>
+        <header class="project-header">
             <h1 class="project-page-title">UNCUT Northwestern</h1>
-            <p><span class="project-page-tag">graphics</span><span class="project-page-tag">web</span></p>
+            <div class="tag-section">
+                <p class="project-page-tag">graphics</p>
+                <p class="project-page-tag">web</p>
+            </div>
         </header>
 
         <article class="project-text">
@@ -47,13 +50,50 @@
                 <p>I'm in charge of creating graphics for our social media posts — posts that reflect the individuality of each athlete's story while keeping to the UNCUT brand — as well as designing and maintaining our website. Visit our <a class="text-link" href="https://www.uncutnorthwestern.com/" target="_blank">website</a> and <a class="text-link" href="https://www.instagram.com/uncutnu/" target="_blank">Instagram</a>, and see some of my design work below.</p>
 
                 <div class="uncut-photo-group">
-                    <img class="uncut-photo" src="images/uncut/1-temi.png">
-                    <img class="uncut-photo" src="images/uncut/3-winfromwithin.jpeg">
-                    <img class="uncut-photo" src="images/uncut/4-launch.jpeg">
-                    <img class="uncut-photo" src="images/uncut/5-ryan.jpeg">
+                    <img class="uncut-photo" src="images/uncut/1-temi.png" onclick="openModal(); currentSlide(1)">
+                    <img class="uncut-photo" src="images/uncut/3-winfromwithin.jpeg" onclick="openModal(); currentSlide(2)">
+                    <img class="uncut-photo" src="images/uncut/4-launch.jpeg" onclick="openModal(); currentSlide(3)">
+                    <img class="uncut-photo" src="images/uncut/5-ryan.jpeg" onclick="openModal(); currentSlide(4)">
                     
-                    <img id="uncut-story" src="images/uncut/5-story.png">
-            </div>
+                    <img id="uncut-story" src="images/uncut/5-story.png" onclick="openModal(); currentSlide(5)">
+                </div>
+
+                <!-- lightbox -->
+                <div id="myModal" class="modal">
+                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <div class="modal-content">
+                
+                        <div class="mySlides">
+                            <img class="gallery-image" src="images/uncut/1-temi.png" alt='Graphic for the story "Two Cultures, One Story," written by volleyball player Temi Thomas-Ailara'>
+                        </div>
+                    
+                        <div class="mySlides" alt="2">
+                            <img class="gallery-image" src="images/uncut/3-winfromwithin.jpeg" alt='Teaser graphic for the story "Win from Within," written by football player Ryan Hilinski'>
+                        </div>
+                    
+                        <div class="mySlides">
+                            <img class="gallery-image" src="images/uncut/4-launch.jpeg" alt="Launch graphic for UNCUT Northwestern's social media accounts">
+                        </div>
+                    
+                        <div class="mySlides">
+                            <img class="gallery-image" src="images/uncut/5-ryan.jpeg" alt='Graphic for the story "Win from Within," written by football player Ryan Hilinski'>
+                        </div>
+
+                        <div class="mySlides">
+                            <img class="gallery-image" src="images/uncut/5-story.png" alt='"Meet the team" Instagram story series'>
+                        </div>
+                    
+                        <!-- next + prev -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                        <!-- caption -->
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+                        
+                    </div>
+                </div>
 
             </section>
 

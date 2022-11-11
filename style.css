@@ -67,7 +67,11 @@
 }
 
 
-/************* HEADER **************/
+
+
+/************* HOMEPAGE **************/
+
+/* header */
 
 .homepage-header {
     display: flex;
@@ -84,7 +88,7 @@
 }
 
 
-/************* PROJECT SECTION **************/
+/* project section */
 
 .projects-section {
     margin-left: 15%;
@@ -204,20 +208,52 @@
 
 /************* PROJECT PAGES **************/
 
+/* title */
+
+.project-header {
+    margin-bottom: 70px;
+}
+
+.project-page-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 55px;
+    margin-left: 17%;
+    margin-right: 17%;
+    margin-top: 20vh;
+    margin-bottom: 15px;
+}
+
+.tag-section {
+    margin-left: 17%;
+    margin-right: 17%;
+}
+
+.project-page-tag {
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    background-color: #76AFB8;
+    color: white;
+    border-radius: 15px;
+    padding: 5px 11px;
+    display: inline;
+    margin-right: 10px;
+}
+
+
 /* summary */
 
 .project-text {
     display: grid;
-    column-gap: 100px;
-    grid-template-areas: "body body body body body body body summary summary summary";
-    margin-left: 10%;
-    margin-right: 10%;
+    column-gap: 40px;
+    grid-template-areas: "body body body body body body body summary summary";
+    margin-left: 17%;
+    margin-right: 17%;
 }
 
 .summary {
     grid-area: summary;
     width: 100%;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     font-family: 'Manrope', sans-serif;
     font-size: 17px;
 }
@@ -231,35 +267,17 @@
     font-weight: 700;
 }
 
-.project-page-title {
-    font-family: 'Manrope', sans-serif;
-    font-size: 55px;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 20vh;
-    margin-bottom: 15px;
-}
 
-.project-page-tag {
-    font-family: 'Manrope', sans-serif;
-    font-size: 15px;
-    margin-left: 10%;
-    margin-right: 10%;
-    background-color: #76AFB8;
-    color: white;
-    border-radius: 15px;
-    padding: 5px 11px;
-    display: inline;
-}
+/* body */
 
 .project-page-body {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 21px;
     line-height: 1.4em;
     grid-area: body;
-    width: 80%;
+    /* width: 80%; */
 }
 
 .project-page-body p {
@@ -283,10 +301,131 @@
 .subheading {
     font-size: 25px;
     font-weight: 500;
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 
-.project-page-image {
+/* image stuff: galleries, slideshows, etc. */
+
+/* ind. photo (full width) */
+
+.full-width-image {
+    width: 135%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-right: -17%;
+}
+
+/* automatic slideshow */
+
+.automatic-slideshow {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* gallery + lightbox/modal */
+
+/* LIGHTBOX BG */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #00000080;
+}
+  
+/* Modal Content */
+.modal-content {
+    position: relative;
+    text-align: center;
+    margin: 5vh auto;
+    padding: 0;
+}
+  
+/* close button */
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+/* slides */
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    height: 83vh;
+}
+  
+/* next + previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+  
+.next {
+    right: 2vw;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 2vw;
+    border-radius: 3px 0 0 3px;
+}
+  
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+  
+/* caption */
+.caption-container {
+    text-align: center;
+    padding: 2px 16px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.illo-image {
+    width: 100%;
+}
+
+.layout-image {
+    width: 100%;
+}
+
+.cd-image {
     width: 100%;
 }
 
@@ -340,13 +479,20 @@
 }
 
 
-/**** nbn mag-to-web ***/
+/************ NBN MAG-TO-WEB PAGE ***********/
+
+#mag-to-web-header {
+    width: 100%;
+    margin-bottom: 30px;
+}
 
 .web-projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 70px;
+    margin-right: -17%;
+    width: 135%;
 }
 
 .web-project-card {
@@ -356,8 +502,9 @@
 
 .web-project-image {
     width: 100%;
-    height: 200px;
+    height: 350px;
     background-size: cover;
+    background-position: center;
     filter: drop-shadow(1px 3px 4px #e2e2e2);
 }
 
@@ -399,30 +546,42 @@
 }
 
 
-/**** baip ***/
+/************ BAIP ***********/
 
 #wireframe {
     float: left;
-    width: 15%;
-    margin-right: 30px;
+    width: 18%;
+    margin-right: 40px;
     margin-top: 10px;
 }
 
 .interview-group {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    /* display: flex;
+    flex-wrap: nowrap; */
+    /* justify-content: space-between; */
     margin-bottom: 40px;
     margin-top: 20px;
+    width: 100%;
 }
 
 .interview-photo {
-    /* width: 49%; */
-    height: 340px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#baip-vid {
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+
+.image-caption {
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.2em;
 }
 
 
-/**** uncut ***/
+/************ UNCUT ***********/
 
 .uncut-photo-group {
     display: flex;
@@ -434,18 +593,21 @@
 .uncut-photo {
     width: 49%;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 
 #uncut-story {
     width: 100%;
+    cursor: pointer;
 }
 
 
-/**** wavelength ***/
+/************ WAVELENGTH ***********/
 
 #wavelength-ss {
-    width: 35%;
+    width: 36%;
     margin-left: 32%;
+    margin-bottom: 30px;
     filter: drop-shadow(1px 2px 2px #989898);
 }
 
@@ -463,36 +625,31 @@
 }
 
 
-/**** amazon sellers ***/
+/************ AMAZON SELLERS ***********/
 
 .dash {
-    width: 100%;
+    width: 135%;
     margin-top: 30px;
     margin-bottom: 40px;
+    margin-right: -17%;
 }
 
 
-/**** studio assistant ***/
+/************ STUDIO ASSISTANT ***********/
 
-.illo-group {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    margin-top: 40px;
+.image-group {
+    column-count: 2;
+    column-gap: 16px;
 }
 
-.illo-3 {
-    height: 190px;
-}
-
-.illo-2 {
-    height: 346px;
-    margin-bottom: 23px;
+.group-image {
+    padding: 8px 0;
+    width: 100%;
+    cursor: pointer;
 }
 
 
-/**** postcards ***/
+/************ POSTCARDS ***********/
 
 .postcard-group {
     display: flex;
@@ -512,7 +669,7 @@
 }
 
 
-/**** sports photography ***/
+/************ SPORTS PHOTOGRAPHY ***********/
 
 .sports-gallery {
     /* margin-left: 10%;

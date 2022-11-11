@@ -25,9 +25,11 @@
             </div>
         </nav>
 
-        <header>
+        <header class="project-header">
             <h1 class="project-page-title">design blog illustrations</h1>
-            <p class="project-page-tag">illustration</p>
+            <div class="tag-section">
+                <p class="project-page-tag">illustration</p>
+            </div>
         </header>
 
         <article class="project-text">
@@ -42,14 +44,49 @@
             <section class="project-page-body">
                 <p>I worked as a studio assistant at Northwestern's Segal Design Institute this summer, and one of my responsibilities in this role was assisting my professor with creating a design blog. Here are a few illustrations I made for her blog posts, all made with Adobe Illustrator.</p>
 
-                <div class="illo-group">
-                    <img class="illo-2" src="images/studio-assistant/pacifier-illo.jpg">
-                    <img class="illo-2" src="images/studio-assistant/sail-ballast.jpg">
+                <div class="image-group">
+                    <img class="group-image" src="images/studio-assistant/pacifier-illo.jpg" onclick="openModal(); currentSlide(1)">
+                    <img class="group-image" src="images/studio-assistant/brain.jpg" onclick="openModal(); currentSlide(2)">
+                    <img class="group-image" src="images/studio-assistant/dr-seuss.jpg" onclick="openModal(); currentSlide(3)">
+                    <img class="group-image" src="images/studio-assistant/sail-ballast.jpg" onclick="openModal(); currentSlide(4)">
+                    <img class="group-image" src="images/studio-assistant/wiser.png" onclick="openModal(); currentSlide(5)">
                 </div>
-                <div class="illo-group">
-                    <img class="illo-3" src="images/studio-assistant/brain.jpg">
-                    <img class="illo-3" src="images/studio-assistant/wiser.png">
-                    <img class="illo-3" src="images/studio-assistant/dr-seuss.jpg">
+
+                <!-- lightbox -->
+                <div id="myModal" class="modal">
+                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <div class="modal-content">
+                
+                        <div class="mySlides">
+                            <img class="gallery-image" src="images/studio-assistant/pacifier-illo.jpg" alt='Illustrated for a blog post titled "Think the interns look young? Meet today’s entrepreneurs"'>
+                        </div>
+                    
+                        <div class="mySlides" alt="2">
+                            <img class="gallery-image" src="images/studio-assistant/brain.jpg" alt='Illustrated for a blog post titled "A hard job is good to find: The task of the educator and leader is to appeal to the intrinsic desire for exploration and challenge"'>
+                        </div>
+                    
+                        <div class="mySlides">
+                            <img class="gallery-image" src="images/studio-assistant/dr-seuss.jpg" alt='Illustrated for a blog post titled "If Dr. Seuss had been an accountant"'>
+                        </div>
+                    
+                        <div class="mySlides">
+                            <img class="gallery-image" src="images/studio-assistant/sail-ballast.jpg" alt='Illustrated for a blog post titled "Are you ballast or sail? Some of us move forward fast, others prevent the ship from sinking"'>
+                        </div>
+
+                        <div class="mySlides">
+                            <img class="gallery-image" src="images/studio-assistant/wiser.png" alt='Illustrated for a blog post titled "WISE words: Advice for women in STEM"'>
+                        </div>
+                    
+                        <!-- next + prev -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                        <!-- caption -->
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+                        
+                    </div>
                 </div>
 
             </section>

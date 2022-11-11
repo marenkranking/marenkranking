@@ -25,9 +25,11 @@
             </div>
         </nav>
 
-        <header>
+        <header class="project-header">
             <h1 class="project-page-title">postcards</h1>
-            <p class="project-page-tag">illustration</p>
+            <div class="tag-section">
+                <p class="project-page-tag">illustration</p>
+            </div>
         </header>
 
         <article class="project-text">
@@ -41,15 +43,51 @@
             <section class="project-page-body">
                 <p>After learning the ins and outs of Adobe Illustrator during quarantine in the spring of 2020, I’ve been making digital art – most of my work has been inspired by the places I've traveled and lived, from San Francisco to Chicago.</p>
 
-                <div class="postcard-group">
-                    <img class="postcard-3" src="images/postcards/brooklyn.png">
-                    <img class="postcard-3" src="images/postcards/bixby.png">
-                    <img class="postcard-3" src="images/postcards/golden-gate.png">
+                <div class="image-group">
+                    <img class="group-image" src="images/postcards/brooklyn.png" onclick="openModal(); currentSlide(1)">
+                    <img class="group-image" src="images/postcards/golden-gate.png" onclick="openModal(); currentSlide(2)">
+                    <img class="group-image" src="images/postcards/bixby.png" onclick="openModal(); currentSlide(3)">
+                    <img class="group-image" src="images/postcards/snowy-bridge.png" onclick="openModal(); currentSlide(4)">
+                    <img class="group-image" src="images/postcards/deering.png" onclick="openModal(); currentSlide(5)">
                 </div>
-                <div class="postcard-group">
-                    <img class="postcard-2" src="images/postcards/snowy-bridge.png">
-                    <img class="postcard-2" src="images/postcards/deering.png">
+
+                <!-- lightbox -->
+                <div id="myModal" class="modal">
+                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <div class="modal-content">
+                
+                        <div class="mySlides">
+                            <img class="gallery-image" src="images/postcards/brooklyn.png" alt="Brooklyn Bridge">
+                        </div>
+                    
+                        <div class="mySlides" alt="2">
+                            <img class="gallery-image" src="images/postcards/golden-gate.png" alt="Golden Gate Bridge">
+                        </div>
+                    
+                        <div class="mySlides">
+                            <img class="gallery-image" src="images/postcards/bixby.png" alt="Bixby Bridge">
+                        </div>
+                    
+                        <div class="mySlides">
+                            <img class="gallery-image" src="images/postcards/snowy-bridge.png" alt="Snowy bridge">
+                        </div>
+
+                        <div class="mySlides">
+                            <img class="gallery-image" src="images/postcards/deering.png" alt="Deering Library">
+                        </div>
+                    
+                        <!-- next + prev -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                        <!-- caption -->
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+                        
+                    </div>
                 </div>
+                
             </section>
 
         </article>

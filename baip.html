@@ -25,9 +25,11 @@
             </div>
         </nav>
 
-        <header>
+        <header class="project-header">
             <h1 class="project-page-title">The resurgence of analog film: interactive story</h1>
-            <p class="project-page-tag">web</p>
+            <div class="tag-section">
+                <p class="project-page-tag">web</p>
+            </div>
         </header>
 
         <article class="project-text">
@@ -41,6 +43,11 @@
             
             <section class="project-page-body">
 
+                <video id="baip-vid" width="100%" autoplay muted loop>
+                    <source src="images/baip/final-vid.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
                 <p class="subheading">the project</p>
 
                 <p>As part of Northwestern’s media-and-tech focused Bay Area Immersion Program, my cohort took a class called Visual Storytelling for the Web. In it, we were encouraged to push past the often static presentation of journalism on digital platforms and learned the tools to make our own stories interactive.</p>
@@ -53,12 +60,13 @@
 
                 <p>One of the members of our group was an avid photographer and had already heard about the price hikes, but we needed to find data to legitimize our angle. And we found it – the prices of film equipment have steadily increased since 2007.</p>
 
-                <p class="pullquote">Next, we talked to people.</p>
-
                 <div class="interview-group">
                     <img class="interview-photo" src="images/baip/bts-interview.jpg">
-                    <img class="interview-photo" src="images/baip/bts-photo.jpg">
+                    <p class="image-caption">Josh, one of our group members, interviewed Bay Area photographer Chris Chu on camera as the rest of us controlled the interview audio and video.</p>
+                    <!-- <img class="interview-photo" src="images/baip/bts-photo.jpg"> -->
                 </div>
+
+                <p class="pullquote">Next, we talked to people.</p>
 
                 <ul>
                     <p>We interviewed the people who are experiencing both the increase in film popularity and the increase in prices, including:</p>
@@ -71,7 +79,7 @@
 
                 <p class="pullquote">We then put it all together in an interactive, visual format that made understanding the material easy.</p>
 
-                <p>After beginning with a wireframe of the story prototype, I built the webpage using JavaScript and GSAP. We played into the film motif of the story: I formatted the introduction as a strip of film that scrolls sideways, layered photos on top of each other and implemented a dark visual theme to the page. By keeping visuals at the forefront of the story, we enhanced what could otherwise be an article bogged down by price stats and econ explainers.</p>
+                <p>After building a wireframe of the story prototype (at left), I built the webpage using JavaScript and GSAP. We played into the film motif of the story: I formatted the introduction as a strip of film that scrolls sideways, layered photos on top of each other and implemented a dark visual theme to the page. By keeping visuals at the forefront of the story, we enhanced what could otherwise be an article bogged down by price stats and econ explainers.</p>
 
                 <p class="subheading">the solution</p>
 
