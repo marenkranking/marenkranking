@@ -8,6 +8,35 @@ window.addEventListener("scroll", function(){
     }
 })
 
+// FILTERING ON HOMEPAGE
+
+function filterResults(event) {
+    console.log(event.target.innerHTML);
+    let category = event.target.innerHTML
+
+    document.querySelectorAll(".homepage-project-link").forEach(function(card) {
+        if (card.classList.contains(category)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none'
+        }
+    })
+}
+
+function toggleClass(event) {
+    var tagList = document.querySelectorAll(".section-name")
+    for (let tag of tagList) {
+        tag.classList.remove("clicked")
+    }
+    event.target.classList.toggle("clicked");
+}
+
+var tagList = document.querySelectorAll(".section-name")
+for (let tag of tagList) {
+    tag.addEventListener("click", filterResults);
+    tag.addEventListener("click", toggleClass);
+}
+
 // AUTOMATIC SLIDESHOW
 
 let slideshowIndex = 0;
@@ -55,36 +84,6 @@ function automaticSlidesIllos() {
   if (illoSlideshowIndex > slides.length) {illoSlideshowIndex = 1}
   slides[illoSlideshowIndex-1].style.display = "block";
   setTimeout(automaticSlidesIllos, 2500);
-}
-
-
-// FILTERING ON HOMEPAGE
-
-function filterResults(event) {
-    console.log(event.target.innerHTML);
-    let category = event.target.innerHTML
-
-    document.querySelectorAll(".homepage-project-link").forEach(function(card) {
-        if (card.classList.contains(category)) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none'
-        }
-    })
-}
-
-function toggleClass(event) {
-    var tagList = document.querySelectorAll(".section-name")
-    for (let tag of tagList) {
-        tag.classList.remove("clicked")
-    }
-    event.target.classList.toggle("clicked");
-}
-
-var tagList = document.querySelectorAll(".section-name")
-for (let tag of tagList) {
-    tag.addEventListener("click", filterResults);
-    tag.addEventListener("click", toggleClass);
 }
 
 // GALLERY LIGHTBOX: https://www.w3schools.com/howto/howto_js_lightbox.asp
