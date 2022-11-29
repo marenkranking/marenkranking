@@ -63,7 +63,7 @@
 
 .nav-bar-scroll {
     background-color: white;
-    filter: drop-shadow(0 1px 1px rgb(0,0,0,.5));
+    filter: drop-shadow(0 1px 6px rgb(0,0,0,.5));
 }
 
 
@@ -78,12 +78,12 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
 }
 
 .header-content {
     font-family: 'Manrope', sans-serif;
-    font-size: 100px;
+    font-size: 90px;
     text-align: center;
 }
 
@@ -131,17 +131,25 @@
 }
 
 .project-card {
-    display: block;
+    display: relative;
     margin-bottom: 60px;
 }
 
 .project-image {
+    position: relative;
+    bottom: 0;
     background-image: url(images/print-design.png);
     background-size: cover;
     background-position: center center;
     height: 300px;
     width: 22vw;
+    transition: .4s ease;
     filter: drop-shadow(1px 2px 3px #989898);
+}
+
+.project-card:hover .project-image {
+    bottom: 10px;
+    transition: .4s ease;
 }
 
 .project-title {
@@ -464,14 +472,33 @@
     font-size: 25px;
 }
 
-.left {
+.left a {
     text-align: left;
     padding-right: 2%;
+    position: relative;
+    right: 0;
+    transition: .4s ease;
+}
+
+.left a:hover {
+    right: 5px;
+    color: #565656;
 }
 
 .right {
     text-align: right;
     padding-right: 2%;
+}
+
+.right a {
+    position: relative;
+    left: 0;
+    transition: .4s ease;
+}
+
+.right a:hover {
+    left: 5px;
+    color: #565656;
 }
 
 .text-link {
@@ -502,26 +529,8 @@
 
 .web-project-image {
     width: 100%;
-    height: 350px;
-    background-size: cover;
-    background-position: center;
-    filter: drop-shadow(1px 3px 4px #e2e2e2);
-}
-
-#mag-to-web-homepage {
-    background-image: url(images/mag-to-web/spring2021homepage.png);
-}
-
-#olivia-pierce {
-    background-image: url(images/mag-to-web/oliviapierce.png);
-}
-
-#swingers {
-    background-image: url(images/mag-to-web/swingers.png);
-}
-
-#dr-zoom {
-    background-image: url(images/mag-to-web/dr-zoom.png);
+    filter: drop-shadow(1px 3px 4px #C4C4C4);
+    border-radius: 15px;
 }
 
 .web-projects a {
@@ -531,7 +540,7 @@
 
 .web-project-title {
     font-family: 'Manrope', sans-serif;
-    font-size: 18px;
+    font-size: 23px;
     line-height: 1.3em;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -540,7 +549,7 @@
 }
 
 .web-project-description {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.3em;
     font-family: 'Open Sans', sans-serif;
 }
@@ -559,7 +568,7 @@
     /* display: flex;
     flex-wrap: nowrap; */
     /* justify-content: space-between; */
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     margin-top: 20px;
     width: 100%;
 }
@@ -593,7 +602,7 @@
 .uncut-photo {
     width: 49%;
     margin-bottom: 15px;
-    cursor: pointer;
+    cursor: zoom-in;
 }
 
 #uncut-story {
@@ -666,6 +675,10 @@
 
 .postcard-2 {
     height: 335px;
+}
+
+.group-image {
+    cursor: zoom-in;
 }
 
 
@@ -743,7 +756,8 @@
 }
 
 .image img {
-    width: 80%;
+    position: fixed;
+    width: 40%;
 }
 
 .text {

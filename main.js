@@ -51,7 +51,7 @@ function automaticSlidesCD() {
   slideshowIndex++;
   if (slideshowIndex > slides.length) {slideshowIndex = 1}
   slides[slideshowIndex-1].style.display = "block";
-  setTimeout(automaticSlidesCD, 1500);
+  setTimeout(automaticSlidesCD, 1200);
 }
 
 
@@ -67,7 +67,7 @@ function automaticSlides() {
   slowerSlideshowIndex++;
   if (slowerSlideshowIndex > slides.length) {slowerSlideshowIndex = 1}
   slides[slowerSlideshowIndex-1].style.display = "block";
-  setTimeout(automaticSlides, 2500);
+  setTimeout(automaticSlides, 1900);
 }
 
 
@@ -140,23 +140,4 @@ window.onclick = function(event) {
         modal.style.display = "none";
      }
 }
-
-
-// AUTOMATIC SLIDESHOW
-
-// var slideshowIndex = 0;
-// carousel();
-
-// function carousel() {
-//   var i;
-//   var x = document.querySelectorAll(".project-page-image");
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";
-//   }
-//   slideshowIndex++;
-//   if (slideshowIndex > x.length) {slideshowIndex = 1}
-//   console.log(x[slideshowIndex-1].style.display)
-//   x[slideshowIndex-1].style.display = "block";
-//   setTimeout(carousel, 2000);
-// }
 
