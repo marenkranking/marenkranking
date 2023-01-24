@@ -98,8 +98,10 @@
 .section-list-div {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom: 55px;
+    margin-left: 7%;
+    margin-right: 7%;
 }
 
 .section-name {
@@ -122,22 +124,24 @@
 .projects {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 2%;
 }
 
 .projects a {
     text-decoration: none;
-    width: 29%;
-    margin-left: 2%;
-    margin-right: 2%;
+    width: 32%;
+    /* margin-left: 2%;
+    margin-right: 2%; */
 }
 
 .project-card {
     display: relative;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .long {
-    width: 63% !important;
+    width: 66% !important;
 }
 
 .project-image {
@@ -147,13 +151,8 @@
     background-size: cover;
     background-position: center center;
     height: 300px;
-    width: 20vw;
     transition: .4s ease;
     filter: drop-shadow(1px 2px 3px #989898);
-}
-
-.long-image {
-    width: 44vw !important;
 }
 
 .project-card:hover .project-image {
@@ -187,7 +186,7 @@
 
 
 #nbn-print {
-    background-image: url(images/homepage/print-cover-2.png);
+    background-image: url(images/homepage/print-cover-2.jpg);
 }
 
 #nbn-mag-to-web {
@@ -195,15 +194,15 @@
 }
 
 #baip {
-    background-image: url(images/homepage/baip-cover.png);
+    background-image: url(images/homepage/baip-cover.jpg);
 }
 
 #uncut {
-    background-image: url(images/homepage/uncut-cover.png);
+    background-image: url(images/homepage/uncut-cover.jpg);
 }
 
 #sports-photography {
-    background-image: url(images/homepage/photography-cover.png);
+    background-image: url(images/homepage/photography-cover.jpg);
 }
 
 #studio-assistant {
@@ -215,7 +214,7 @@
 }
 
 #wavelength {
-    background-image: url(images/homepage/uxui-cover.png);
+    background-image: url(images/homepage/uxui-cover.jpg);
 }
 
 #amazon-sellers {
@@ -539,12 +538,21 @@
 .web-project-card {
     width: 48%;
     margin-bottom: 30px;
+    position: relative;
 }
 
 .web-project-image {
     width: 100%;
     filter: drop-shadow(1px 3px 4px #C4C4C4);
     border-radius: 15px;
+    position: relative;
+    bottom: 0;
+    transition: .4s ease;
+}
+
+.web-project-card:hover .web-project-image {
+    bottom: 5px;
+    transition: .4s ease;
 }
 
 .web-projects a {
@@ -654,27 +662,30 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    align-items: top;
+    margin-top: 20vh;
 }
 
 .image {
-    width: 50%;
+    width: 45%;
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100vh;
 }
 
 .image img {
     position: fixed;
-    width: 40%;
+    width: 45%;
+    left: 10vw;
 }
 
 .text {
     font-family: 'Manrope', sans-serif;
-    font-size: 15px;
-    width: 40%;
+    font-size: 17px;
+    width: 30%;
     text-align: left;
-    margin-top: 20vh;
+    line-height: 1.4;
+    /* padding-right: 15vw; */
 }
 
 .text p, li {
@@ -699,27 +710,14 @@
     .navbar{
         height: 5vh;
     }
+    .projects {
+        gap: 4%;
+    }
     .projects a {
-        width: 46%;
-        margin-left: 2%;
-        margin-right: 2%;
+        width: 48%;
     }
     .long {
         width: 100% !important;
-    }
-    .project-image {
-        position: relative;
-        bottom: 0;
-        background-image: url(images/print-design.png);
-        background-size: cover;
-        background-position: center center;
-        height: 300px;
-        width: 32vw;
-        transition: .4s ease;
-        filter: drop-shadow(1px 2px 3px #989898);
-    }
-    .long-image {
-        width: 67vw !important;
     }
 }
 
@@ -807,6 +805,7 @@
     .image img {
         position: relative;
         width: 160%;
+        left: 0;
     }
     .text {
         font-family: 'Manrope', sans-serif;
@@ -829,32 +828,16 @@
         font-size: 16px;
     }
     .projects a {
-        width: 96%;
-        margin-left: 2%;
-        margin-right: 2%;
+        width: 100%;
     }
     .long {
         width: 100% !important;
     }
-    .project-image {
-        position: relative;
-        bottom: 0;
-        background-image: url(images/print-design.png);
-        background-size: cover;
-        background-position: center center;
-        height: 300px;
-        width: 86vw;
-        transition: .4s ease;
-        filter: drop-shadow(1px 2px 3px #989898);
-    }
-    .long-image {
-        width: 86vw !important;
-    }
     #nbn-print {
-        background-image: url(images/homepage/print-cover.png);
+        background-image: url(images/homepage/print-cover.jpg);
     }
     #nbn-mag-to-web {
-        background-image: url(images/homepage/web-cover.png);
+        background-image: url(images/homepage/web-cover.jpg);
     }
     .projects-section {
         margin-left: 5%;
