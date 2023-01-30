@@ -44,14 +44,15 @@
 }
 
 .link {
-    padding-left: 20px;
+    margin-left: 20px;
     color: black;
     text-decoration: none;
 }
 
 .current {
     font-weight: 600;
-    text-decoration: underline 2.5px #76AFB8 !important;
+    border-bottom: 3px solid #76AFB8;
+    /* text-decoration: underline 2.5px #76AFB8 !important; */
 }
 
 .nav-bar a:hover {
@@ -184,6 +185,9 @@
     color: black;
 }
 
+#midterms {
+    background-image: url(images/homepage/midterms-guide-cover.png);
+}
 
 #nbn-print {
     background-image: url(images/homepage/print-cover-2.jpg);
@@ -642,7 +646,7 @@
     filter: drop-shadow(1px 2px 2px #989898);
 }
 
-.wireframe-group {
+.photo-group {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -653,6 +657,11 @@
 .wireframe-photo {
     width: 19%;
     filter: drop-shadow(1px 2px 2px #989898);
+}
+
+.sketch-photo {
+    width: 49%;
+    filter: drop-shadow(1px 2px 2px #98989850);
 }
 
 
@@ -700,6 +709,14 @@
 .about-title {
     font-size: 30px;
     color: #76AFB8;
+}
+
+
+/************* MIDTERMS GUIDE **************/
+
+#midterms-vid {
+    margin-top: -30px;
+    margin-bottom: 30px;
 }
 
 
