@@ -9,24 +9,28 @@
 .nav-bar {
     z-index: 1000;
     background-color: transparent;
-    padding: 10px 40px 35px 20px;
+    padding: 0 20px 5px;
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
-    height: 1.5vh;
-    transition-duration: 1s;
+    height: 55px;
+    transition-duration: 0.5s;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
     font-family: 'Manrope', sans-serif;
+
+    @media screen and (max-width: 480px) {
+        height: 50px;
+        padding: 0 15px;
+    }
 }
 
 .nav-name {
     align-items: left;
-    width: 50%;
     font-size: 25px;
-    padding-left: 15px;
     font-weight: 700;
     color: #76AFB8;
 }
@@ -39,20 +43,25 @@
 .nav-links {
     text-align: right;
     padding-top: 4px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 300;
+    text-transform: uppercase;
 }
 
 .link {
     margin-left: 20px;
-    color: black;
+    color: #989898;
     text-decoration: none;
 }
 
+.link:hover {
+    color: black;
+}
+
 .current {
-    font-weight: 600;
-    border-bottom: 3px solid #76AFB8;
-    /* text-decoration: underline 2.5px #76AFB8 !important; */
+    font-weight: 700;
+    color: black;
+    /* border-bottom: 2px solid black; */
 }
 
 .nav-bar a:hover {
@@ -74,10 +83,25 @@
 
 /* header */
 
+.homepage-header {
+    overflow: hidden;
+}
+
 .homepage-header img {
-    width: 100%;
-    margin-top: 12vh;
-    margin-bottom: 8vh;
+    max-width: 100%;
+    margin: 80px auto 20px;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        /* margin-left: -100px; */
+    }
+
+    @media screen and (max-width: 480px) {
+        max-width: 180%;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
 }
 
 .header-content {
@@ -91,35 +115,32 @@
 /* project section */
 
 .projects-section {
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 5vh;
+    max-width: 1000px;
+    margin: auto auto 10vh;
+    padding: 0 1rem;
 }
 
 .section-list-div {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-bottom: 55px;
-    margin-left: 7%;
-    margin-right: 7%;
+    margin-bottom: 30px;
 }
 
 .section-name {
     font-family: 'Manrope', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 300;
+    text-transform: uppercase;
     color: #989898;
-    padding: 10px;
+    padding: 5px;
+    text-align: center;
+    width: 100px;
 }
 
 .section-name:hover {
     color: black;
     cursor: pointer;
-}
-
-#all {
-    font-size: 25px;
 }
 
 .projects {
@@ -132,8 +153,6 @@
 .projects a {
     text-decoration: none;
     width: 32%;
-    /* margin-left: 2%;
-    margin-right: 2%; */
 }
 
 .project-card {
@@ -152,40 +171,51 @@
     background-size: cover;
     background-position: center center;
     height: 300px;
-    transition: .4s ease;
-    filter: drop-shadow(1px 2px 3px #989898);
+    border-bottom: 7px solid #DBDBDB;
+    transition: 0.2s;
 }
 
 .project-card:hover .project-image {
-    bottom: 10px;
-    transition: .4s ease;
+    border-bottom: 7px solid #76AFB8;
 }
 
 .project-title {
     font-family: 'Manrope', sans-serif;
     font-size: 22px;
-    margin-top: 13px;
+    margin-top: 10px;
     margin-bottom: 13px;
     color: black;
 }
 
 .tag {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 12px;
+    font-weight: 400;
     background-color: #76AFB8;
     border-radius: 15px;
     color: white;
     padding: 3px 8px;
     display: inline;
     margin-right: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
 }
 
 .clicked {
     color: black;
+    font-weight: 700;
+}
+
+#pasta {
+    background-image: url(images/homepage/pasta-2.jpg);
 }
 
 #midterms {
     background-image: url(images/homepage/midterms-guide-cover.png);
+}
+
+#timeline {
+    background-image: url(images/homepage/timeline-2.jpg);
 }
 
 #nbn-print {
@@ -193,7 +223,7 @@
 }
 
 #nbn-mag-to-web {
-    background-image: url(images/homepage/web-cover-2.png);
+    background-image: url(images/homepage/web-cover.png);
 }
 
 #baip {
@@ -230,32 +260,41 @@
 /* title */
 
 .project-header {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
 
 .project-page-title {
     font-family: 'Manrope', sans-serif;
     font-size: 55px;
-    margin-left: 17%;
-    margin-right: 17%;
-    margin-top: 20vh;
-    margin-bottom: 15px;
+    /* margin-left: 17%;
+    margin-right: 17%; */
+    /* margin-top: 20vh;
+    margin-bottom: 15px; */
+    max-width: 900px;
+    margin: 120px auto 20px;
+    padding: 0 1.5rem;
 }
 
 .tag-section {
-    margin-left: 17%;
-    margin-right: 17%;
+    /* margin-left: 17%;
+    margin-right: 17%; */
+    max-width: 900px;
+    margin: auto;
+    padding: 0 1.5rem;
 }
 
 .project-page-tag {
-    font-family: 'Manrope', sans-serif;
-    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
     background-color: #76AFB8;
     color: white;
     border-radius: 15px;
     padding: 5px 11px;
     display: inline;
-    margin-right: 10px;
+    margin-right: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
 }
 
 
@@ -264,20 +303,25 @@
 .project-text {
     display: grid;
     column-gap: 40px;
-    grid-template-areas: "body body body body body body body summary summary";
-    margin-left: 17%;
-    margin-right: 17%;
+    grid-template-columns: 640px 1fr;
+    /* grid-template-areas: "body body body body body body body summary summary"; */
+    grid-template-areas: "body summary";
+    /* margin-left: 17%;
+    margin-right: 17%; */
+    max-width: 900px;
+    margin: auto;
+    padding: 0 1.5rem;
 }
 
 .summary {
     grid-area: summary;
     width: 100%;
     font-family: 'Manrope', sans-serif;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .summary-item {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .summary-title {
@@ -291,7 +335,7 @@
 .project-page-body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    font-size: 21px;
+    font-size: 19px;
     line-height: 1.4em;
     grid-area: body;
 }
@@ -313,8 +357,11 @@
 }
 
 .subheading {
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 500;
+    text-transform: uppercase;
+    color: #919191;
+    margin-bottom: 10px !important;
 }
 
 /* image stuff: galleries, slideshows, etc. */
@@ -326,6 +373,28 @@
     margin-top: 30px;
     margin-bottom: 40px;
     margin-right: -17%;
+}
+
+.side-by-side {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    max-width: 1200px;
+
+    @media screen and (max-width: 1000px) {
+        flex-wrap: wrap;
+        max-width: 100%;
+        gap: 20px;
+    }
+}
+
+.side-by-side img {
+    height: 60vh;
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* automatic slideshow */
@@ -546,15 +615,15 @@
 
 .web-project-image {
     width: 100%;
-    filter: drop-shadow(1px 3px 4px #C4C4C4);
-    border-radius: 15px;
+    /* filter: drop-shadow(1px 3px 4px #C4C4C4); */
+    /* border-radius: 5px; */
     position: relative;
     bottom: 0;
     transition: .4s ease;
 }
 
-.web-project-card:hover .web-project-image {
-    bottom: 5px;
+.web-project-card:hover .web-project-title {
+    text-decoration: underline;
     transition: .4s ease;
 }
 
@@ -570,7 +639,7 @@
     margin-top: 20px;
     margin-bottom: 10px;
     font-weight: 700;
-    color: #76AFB8;
+    /* color: #76AFB8; */
 }
 
 .web-project-description {
@@ -667,33 +736,25 @@
 /************* ABOUT ME **************/
 
 .about-me {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: top;
-    margin-top: 20vh;
+    margin: 15vh auto 10vh;
+    max-width: 640px;
+    padding: 0 1rem;
 }
 
-.image {
-    width: 45%;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
+.blue-highlight {
+    font-weight: 700;
+    color: #76AFB8;
 }
 
 .image img {
-    position: fixed;
-    width: 45%;
-    left: 10vw;
+    width: 100%;
 }
 
 .text {
     font-family: 'Manrope', sans-serif;
     font-size: 17px;
-    width: 30%;
     text-align: left;
     line-height: 1.4;
-    /* padding-right: 15vw; */
 }
 
 .text p, li {
@@ -713,7 +774,7 @@
 
 /************* MIDTERMS GUIDE **************/
 
-#midterms-vid {
+.project-video {
     margin-top: -30px;
     margin-bottom: 30px;
 }
@@ -723,10 +784,10 @@
 /************* MOBILE STYLING **************/
 
 @media screen and (max-width: 1200px){
-    .navbar{
+    /* .navbar{
         height: 5vh;
-    }
-    .projects {
+    } */
+    /* .projects {
         gap: 4%;
     }
     .projects a {
@@ -734,36 +795,10 @@
     }
     .long {
         width: 100% !important;
-    }
+    } */
 }
 
 @media screen and (max-width: 900px){
-    .project-page-title {
-        font-size: 40px;
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-top: 10vh;
-    }
-    .tag-section {
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-    .project-page-tag {
-        font-size: 12px;
-    }
-    /* summary */
-    .project-text {
-        display: block;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-    .summary {
-        margin-bottom: 90px;
-        font-size: 15px;
-    }
-    .pullquote {
-        font-size: 30px;
-    }
     .web-projects {
         width: 100%;
     }
@@ -805,49 +840,49 @@
         width: 100%;
         margin-right: 0;
     }
-    /* about me */
-    .about-me {
-        display: block;
-        width: 100%;
-    }
-    .image {
-        margin-left: 10%;
-        margin-right: 10%;
-        display: block;
-        height: auto;
-        margin-top: 20vh;
-        margin-bottom: 0;
-    }
-    .image img {
-        position: relative;
-        width: 160%;
-        left: 0;
-    }
-    .text {
-        font-family: 'Manrope', sans-serif;
-        font-size: 18px;
-        width: 80%;
-        text-align: left;
-        margin-top: 30px;
-        margin-left: 10%;
+
+    .project-page-title {
+        margin-top: 100px;
     }
 }
 
 @media screen and (max-width: 700px){
+    .project-page-title {
+        font-size: 40px;
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+    .project-page-tag {
+        font-size: 12px;
+    }
+    /* summary */
+    .project-text {
+        display: block;
+    }
+    .summary {
+        margin-bottom: 50px;
+        font-size: 15px;
+    }
+    .pullquote {
+        font-size: 30px;
+    }
     .nav-name {
-        width: 40%;
-        padding-top: 4px;
-        font-size: 16px;
-        padding-left: 8px;
+        font-size: 19px;
     }
     .nav-links {
-        font-size: 16px;
+        font-size: 13px;
     }
     .projects a {
         width: 100%;
     }
     .long {
         width: 100% !important;
+    }
+    #pasta {
+        background-image: url(images/homepage/pasta.jpg);
+    }
+    #timeline {
+        background-image: url(images/homepage/timeline.jpg);
     }
     #nbn-print {
         background-image: url(images/homepage/print-cover.jpg);
@@ -856,12 +891,13 @@
         background-image: url(images/homepage/web-cover.jpg);
     }
     .projects-section {
-        margin-left: 5%;
-        margin-right: 5%;
         margin-bottom: 5vh;
+        margin: auto;
+        padding: 0 5vw;
     }
     .section-list-div {
         flex-wrap: wrap;
         justify-content: space-evenly;
+        margin-bottom: 10px;
     }
 }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS/OTHER STYLESHEETS -->
+        <link rel="stylesheet" href="style.css">
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <title>San Francisco Chronicle timeline redesign - Maren Kranking</title>
+    </head>
+
+    <body>
+
+        <!-- NAV BAR -->
+        <nav class="nav-bar">
+            <div class="nav-name">
+                <a href="home.html" class="name-logo">maren kranking</a>
+            </div>
+
+            <div class="nav-links">
+                <a href="about-me.html" class="link">about me</a>
+                <a href="home.html" class="link">home</a>
+            </div>
+        </nav>
+
+        <header class="project-header">
+            <h1 class="project-page-title"><em>San Francisco Chronicle </em>timeline redesign</h1>
+            <div class="tag-section">
+                <p class="project-page-tag">web</p>
+                <p class="project-page-tag">ux/ui</p>
+            </div>
+        </header>
+
+        <article class="project-text">
+
+            <section class="summary">
+                <p class="summary-item"><span class="summary-title">timeline:</span> two months</p>
+                <p class="summary-item"><span class="summary-title">role:</span> developer</p>
+                <p class="summary-item"><span class="summary-title">publication:</span> <em>San Francisco Chronicle</em></p>
+                <p class="summary-item"><span class="summary-title">skills:</span> web development, web design, React.js, UX</p>
+            </section>
+            
+            <section class="project-page-body">
+
+                <img class="project-video" width="100%" src="images/timeline/timeline-computer.png">
+
+                <p class="subheading">the project</p>
+
+                <p class="pullquote">The goal: to redesign <em>The Chronicle’s</em> timeline component into an embeddable, more compact element that can seamlessly be incorporated into articles.</p>
+
+                <p>This redesign project was one my manager gave me to work on intermittently throughout the course of my internship, using <em>The Chronicle’s</em> current timeline component as a base. The existing full-screen timeline worked great for stories that were written in a completely chronological form, but when it came to embedding it into more traditional articles, it tended to break the story flow and pull the reader out of the article. My manager requested a smaller version of the timeline that could more easily integrate into stories – one that would complement, but not overtake, the article itself.</p>
+
+                <br>
+                <br>
+
+                <p class="subheading">the process</p>
+
+                <p>I began by sketching out the current timeline and noting which features were problematic when being used as an embedded component – the fact that it was <strong>full-screen</strong> broke up the article, it appeared <strong> on mobile devices</strong> and there were a few <strong>technical functionality issues</strong>. With those notes in mind, I then began to reimagine what the component could look like if it were more condensed.</p>
+
+                <div class="full-width-image side-by-side">
+                    <img src="images/timeline/timeline-sketch-1.jpg">
+                    <img src="images/timeline/timeline-sketch-2.jpg">
+                </div>
+
+                <p>I then turned to the code, familiarizing myself with how it worked and adjusting it as necessary for my redesign. The biggest changes I wanted to make were making the component text width and switching the direction of the timeline events to scroll horizontally (and into view) rather than vertically. This involved adding next and previous buttons, and hiding future timeline entries until they’re navigated to.</p>
+               
+                <p>The biggest challenge in this project was probably adjusting the timeline itself – it’s generated with D3, a coding language I have yet to learn, so I had to familiarize myself with it just enough to make the changes I needed.</p>
+        
+                <br>
+                <br>
+
+                <p class="subheading">the solution</p>
+
+                <video class="" width="100%" autoplay muted loop>
+                    <source src="images/timeline/timeline.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <p>Honestly, I was nervous going into this project. Seeing D3 elements in the code was daunting to me, and I wasn’t completely sure if the redesign was something I could do with my skill set. That being said, I’m happy that I took on the challenge – I think completing this was a proud moment for me, and although it’s not a perfect element, it solves the problems the initial timeline had. I finished this project at the end of my internship at <em>The Chronicle</em>, and it recently got incorporated into a huge investigative project by the paper – check it out <a href="https://www.sfchronicle.com/projects/2023/san-francisco-drug-trade-policy/?utm_source=marketing&utm_medium=copy-url-link&utm_campaign=article-share&hash=aHR0cHM6Ly93d3cuc2ZjaHJvbmljbGUuY29tL3Byb2plY3RzLzIwMjMvc2FuLWZyYW5jaXNjby1kcnVnLXRyYWRlLXBvbGljeS8=&time=MTY5MjI1NTA3MjgzMQ==&rid=ZDJiMDE1ZjItZTA5OC00YWE4LWFmNTgtNmI4ZWIyZTVkOWY3&sharecount=Mg==" target="_blank" class="text-link">here</a>.</p>
+               
+            </section>
+
+        </article>
+
+        <div class="portfolio-navigation">
+            <h2 class="project-link left"><a href="postcards.html">&lt; 2022 midterms voting guide</a></h2>
+            <h2 class="project-link right"><a href="the-resurgence-of-analog-film.html">The resurgence of analog film: interactive story &gt;</a></h2>
+        </div>
+        
+    </body>
+
+    <!-- JS STYLESHEETS -->
+    <script src="main.js"></script>
+
+</html>
