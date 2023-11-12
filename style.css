@@ -206,6 +206,10 @@
     font-weight: 700;
 }
 
+#hnp-voter {
+    background-image: url(images/homepage/hnp-voter-guide-2.jpg);
+}
+
 #pasta {
     background-image: url(images/homepage/pasta-2.jpg);
 }
@@ -215,7 +219,7 @@
 }
 
 #timeline {
-    background-image: url(images/homepage/timeline-2.jpg);
+    background-image: url(images/homepage/timeline.jpg);
 }
 
 #nbn-print {
@@ -892,11 +896,11 @@
     .long {
         width: 100% !important;
     }
+    #hnp-voter {
+        background-image: url(images/homepage/hnp-voter-guide.jpg);
+    }
     #pasta {
         background-image: url(images/homepage/pasta.jpg);
-    }
-    #timeline {
-        background-image: url(images/homepage/timeline.jpg);
     }
     #nbn-print {
         background-image: url(images/homepage/print-cover.jpg);
